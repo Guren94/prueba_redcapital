@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Ingresaste correctamente <br>
+                    <a href="{{ url('/archivo') }}">Historico</a>
+                    <hr>
+                    <a href="{{ route('archivo.create') }}" class="btn btn-info">Añadir archivo</a>
                 </div>
             </div>
         </div>
