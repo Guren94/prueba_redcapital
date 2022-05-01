@@ -19,6 +19,9 @@ class CreateSubMenuTable extends Migration
             $table->string('descripcion_sub_menu')->nullable();
             $table->bigInteger('fk_id_menu')->unsigned();
             $table->foreign('fk_id_menu')->references('id_menu')->on('menu');
+            $table->bigInteger('fk_id_permiso')->unsigned();
+            $table->foreign('fk_id_permiso')->references('id_permiso')->on('permiso');
+            $table->string('ruta_sub_menu');
             $table->timestamps();
         });
     }
