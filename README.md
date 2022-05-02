@@ -1,78 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center">Prueba Red Capital</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+
 </p>
 
-## About Laravel
+## Acerca del Proyecto
+Este proyecto realizado para Red Capital consta de los siguientes requerimientos:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Requisitos Funcionales:
+- Login de Usuario.
+- Los usuarios deben tener roles y permisos.
+- El sistema debe tener Menus y Sub-Menus.
+- Cargar archivos al sistema.
+- Historico de los archivos con opcion de descargar.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Requisitos No Funcionales:
+- Laravel 6+.
+- PHP-UNIT.
+- Eloquent.
+- GIT.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Desarrollo del Sistema
+Tomando en consideracion los requerimientos solicitados se comenzo instalando las herramientas necesarias para el sistema. Que fueron las siguientes:
+- Laragon: Como servidor local.
+- MySql 8.0.19: Como gestor de Base de Datos.
+- PHP 7.4.19: Lenguaje de programacion.
+- Composer 2.0.12: Para gestionar Laravel.
+- Visual Studio Code: IDE.
 
-## Learning Laravel
+Despues se definieron las tareas a realizar segun los requerimientos solicitados en el documento. Las cuales se resumen en:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<b>Tareas Iniciales:</b>
+- Crear repositorio en github.
+- Craer Proyecto de Laravel.
+- Diseñar la BD.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<b>Tareas en el proyecto:</b>
+- Crear el login:
+	- Parte visual.
+	- Controlador del login.
+	- Middleware de login.
+- Migrar la BD.
+- Seeders.
+- Interfaz de usuario:
+	- Menus.
+	- Sub Menus.
+	- Controladores de los menus.
+- Subir Archivos:
+	- Interfaz visual.
+	- Controlador.
+- Mensajes del sistema.
 
-## Laravel Sponsors
+### Diseño de la Base de Datos
+Se creo un Diagrama de Entidad-Relacion para retratar los requisitos solicitados. El diagrama es el siguiente:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[![Diagrama](Github "Diagrama")](https://raw.githubusercontent.com/Guren94/prueba_redcapital/master/Capturas/diagrama%20bd%20fondo.png "Diagrama")
