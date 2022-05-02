@@ -54,4 +54,4 @@ Despues se definieron las tareas a realizar segun los requerimientos solicitados
 ### Diseño de la Base de Datos
 Se creo un Diagrama de Entidad-Relacion para retratar los requisitos solicitados. El diagrama es el siguiente:
 
-[![Diagrama](Github "Diagrama")](https://raw.githubusercontent.com/Guren94/prueba_redcapital/master/Capturas/diagrama%20bd%20fondo.png "Diagrama")
+[![Diagrama](Github "Diagrama")](https://github.com/Guren94/prueba_redcapital/blob/master/Capturas/diagrama%20bd%20fondo.png "Diagrama")
