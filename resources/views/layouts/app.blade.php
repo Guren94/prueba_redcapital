@@ -47,11 +47,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -60,9 +55,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                                             document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -105,9 +99,11 @@
                                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                             @foreach ($sub_menus as $sub_menu)
                                                                 @if ($menu->id_menu == $sub_menu->fk_id_menu)
-                                                                    @foreach (DB::table('usuario_permiso')->where('fk_id_usuario', '=', Auth::user()->id)->get() as $usuario_permiso)
+                                                                    @foreach (DB::table('usuario_permiso')->where('fk_id_usuario', '=', Auth::user()->id)->get()
+    as $usuario_permiso)
                                                                         @if ($usuario_permiso->fk_id_permiso == $sub_menu->fk_id_permiso)
-                                                                            <a class="dropdown-item" href="{{ route($sub_menu->ruta_sub_menu) }}">{{ $sub_menu->nombre_sub_menu }}</a>
+                                                                            <a class="dropdown-item"
+                                                                                href="{{ route($sub_menu->ruta_sub_menu) }}">{{ $sub_menu->nombre_sub_menu }}</a>
                                                                         @endif
                                                                     @endforeach
                                                                 @endif

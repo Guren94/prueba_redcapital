@@ -11,7 +11,6 @@
     <h1>Historico</h1><hr>
     <table class="table table-bordered">
         <thead>
-            <th>Id</th>
             <th>Usuario</th>
             <th>Nombre</th>
             <th>Descargas</th>
@@ -19,8 +18,7 @@
         <tbody>
             @foreach ($archivos as $archivo)
                 <tr>
-                    <td>1</td>
-                    <td>{{$archivo->fk_id_usuario}}</td>
+                    <td>{{DB::table('users')->where('id', '=', $archivo->fk_id_usuario)->get()[0]->name}}</td>
                     <td>{{$archivo->nombre_archivo}}</td>
                     <td><a href="{{$archivo->ruta_archivo}}" class="btn btn-success" download>Descargar</a></td>
                 </tr>
